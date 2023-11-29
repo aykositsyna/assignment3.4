@@ -28,106 +28,112 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.StudentsListView = new System.Windows.Forms.ListView();
+            this.NameTB = new System.Windows.Forms.TextBox();
+            this.SpecialityTB = new System.Windows.Forms.TextBox();
+            this.GroupTB = new System.Windows.Forms.TextBox();
+            this.NameLabel = new System.Windows.Forms.Label();
+            this.SpecialityLabel = new System.Windows.Forms.Label();
+            this.GroupLabel = new System.Windows.Forms.Label();
+            this.DeleteStudentBttn = new System.Windows.Forms.Button();
+            this.AddStudentBttn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // listView1
+            // StudentsListView
             // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(21, 12);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(517, 365);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.StudentsListView.HideSelection = false;
+            this.StudentsListView.Location = new System.Drawing.Point(21, 12);
+            this.StudentsListView.Name = "StudentsListView";
+            this.StudentsListView.Size = new System.Drawing.Size(457, 365);
+            this.StudentsListView.TabIndex = 0;
+            this.StudentsListView.UseCompatibleStateImageBehavior = false;
             // 
-            // textBox1
+            // NameTB
             // 
-            this.textBox1.Location = new System.Drawing.Point(560, 54);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(191, 22);
-            this.textBox1.TabIndex = 1;
+            this.NameTB.Location = new System.Drawing.Point(496, 54);
+            this.NameTB.Name = "NameTB";
+            this.NameTB.Size = new System.Drawing.Size(255, 22);
+            this.NameTB.TabIndex = 1;
             // 
-            // textBox2
+            // SpecialityTB
             // 
-            this.textBox2.Location = new System.Drawing.Point(560, 142);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(191, 22);
-            this.textBox2.TabIndex = 2;
+            this.SpecialityTB.Location = new System.Drawing.Point(496, 142);
+            this.SpecialityTB.Name = "SpecialityTB";
+            this.SpecialityTB.Size = new System.Drawing.Size(255, 22);
+            this.SpecialityTB.TabIndex = 2;
             // 
-            // textBox3
+            // GroupTB
             // 
-            this.textBox3.Location = new System.Drawing.Point(560, 230);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(191, 22);
-            this.textBox3.TabIndex = 3;
+            this.GroupTB.Location = new System.Drawing.Point(496, 230);
+            this.GroupTB.Name = "GroupTB";
+            this.GroupTB.Size = new System.Drawing.Size(255, 22);
+            this.GroupTB.TabIndex = 3;
             // 
-            // label1
+            // NameLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(560, 32);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 16);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "label1";
+            this.NameLabel.AutoSize = true;
+            this.NameLabel.Location = new System.Drawing.Point(493, 35);
+            this.NameLabel.Name = "NameLabel";
+            this.NameLabel.Size = new System.Drawing.Size(134, 16);
+            this.NameLabel.TabIndex = 4;
+            this.NameLabel.Text = "Enter student\'s name:";
             // 
-            // label2
+            // SpecialityLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(563, 120);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 16);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "label2";
+            this.SpecialityLabel.AutoSize = true;
+            this.SpecialityLabel.Location = new System.Drawing.Point(493, 123);
+            this.SpecialityLabel.Name = "SpecialityLabel";
+            this.SpecialityLabel.Size = new System.Drawing.Size(157, 16);
+            this.SpecialityLabel.TabIndex = 5;
+            this.SpecialityLabel.Text = "Enter student\'s speciality:";
             // 
-            // label3
+            // GroupLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(560, 208);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 16);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "label3";
+            this.GroupLabel.AutoSize = true;
+            this.GroupLabel.Location = new System.Drawing.Point(493, 211);
+            this.GroupLabel.Name = "GroupLabel";
+            this.GroupLabel.Size = new System.Drawing.Size(135, 16);
+            this.GroupLabel.TabIndex = 6;
+            this.GroupLabel.Text = "Enter student\'s group:";
             // 
-            // button1
+            // DeleteStudentBttn
             // 
-            this.button1.Location = new System.Drawing.Point(150, 402);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.DeleteStudentBttn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DeleteStudentBttn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.DeleteStudentBttn.Location = new System.Drawing.Point(21, 386);
+            this.DeleteStudentBttn.Name = "DeleteStudentBttn";
+            this.DeleteStudentBttn.Size = new System.Drawing.Size(457, 52);
+            this.DeleteStudentBttn.TabIndex = 7;
+            this.DeleteStudentBttn.Text = "Delete";
+            this.DeleteStudentBttn.UseVisualStyleBackColor = true;
+            this.DeleteStudentBttn.Click += new System.EventHandler(this.DeleteStudentBttn_Click);
             // 
-            // button2
+            // AddStudentBttn
             // 
-            this.button2.Location = new System.Drawing.Point(372, 401);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.AddStudentBttn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AddStudentBttn.ForeColor = System.Drawing.Color.Green;
+            this.AddStudentBttn.Location = new System.Drawing.Point(496, 292);
+            this.AddStudentBttn.Name = "AddStudentBttn";
+            this.AddStudentBttn.Size = new System.Drawing.Size(255, 73);
+            this.AddStudentBttn.TabIndex = 8;
+            this.AddStudentBttn.Text = "Add";
+            this.AddStudentBttn.UseVisualStyleBackColor = true;
+            this.AddStudentBttn.Click += new System.EventHandler(this.AddStudentBttn_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.AddStudentBttn);
+            this.Controls.Add(this.DeleteStudentBttn);
+            this.Controls.Add(this.GroupLabel);
+            this.Controls.Add(this.SpecialityLabel);
+            this.Controls.Add(this.NameLabel);
+            this.Controls.Add(this.GroupTB);
+            this.Controls.Add(this.SpecialityTB);
+            this.Controls.Add(this.NameTB);
+            this.Controls.Add(this.StudentsListView);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -137,15 +143,15 @@
 
         #endregion
 
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ListView StudentsListView;
+        private System.Windows.Forms.TextBox NameTB;
+        private System.Windows.Forms.TextBox SpecialityTB;
+        private System.Windows.Forms.TextBox GroupTB;
+        private System.Windows.Forms.Label NameLabel;
+        private System.Windows.Forms.Label SpecialityLabel;
+        private System.Windows.Forms.Label GroupLabel;
+        private System.Windows.Forms.Button DeleteStudentBttn;
+        private System.Windows.Forms.Button AddStudentBttn;
     }
 }
 
