@@ -19,7 +19,7 @@ namespace ModelLayer
         public void Add(Student student)
         {
             Students.Add(student);
-            DataSourceChanged?.Invoke(this, Students);
+            DataSourceChanged?.Invoke(this, );
         }
 
         public void Delete(int index)

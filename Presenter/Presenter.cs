@@ -18,6 +18,7 @@ namespace Presenter
         {
             view.AddEvent += View_OnAdd;
             view.DeleteEvent += View_OnDelete;
+            model.DataSourceChanged += Model_DataChanged;
         }
 
         public void View_OnAdd(StudentEventArgs e)
@@ -30,9 +31,18 @@ namespace Presenter
             model.Delete(index);
         }
 
-        public void Model_DataChanged(IEnumerable<StudentEventArgs> studentEventArgs)
+        public void Model_DataChanged(object sender, IEnumerable<Student> students)
         {
-            view.UpdateData(studentEventArgs);
+            List<StudentEventArgs> list = new List<StudentEventArgs>();
+            foreach (Student student in students)
+            {
+                StudentEventArgs e = new StudentEventArgs();
+                e.name = student.Name;
+                e.speciality = student.Speciality;
+                e.group = student.Group;
+                list.Add(e);
+            }
+            view.UpdateData(list);
         }
 
 

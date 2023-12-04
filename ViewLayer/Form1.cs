@@ -21,6 +21,9 @@ namespace ViewLayer
             StudentsListView.Columns.Add("Group");
         }
 
+        public event Action<StudentEventArgs> AddEvent;
+        public event Action<int> DeleteEvent;
+
         private void UpdateData(IEnumerable<StudentEventArgs> studentEventArgs)
         {
             StudentsListView.Items.Clear();
@@ -33,6 +36,7 @@ namespace ViewLayer
                 studentItem.SubItems.Add(e.name);
                 studentItem.SubItems.Add(e.speciality);
                 studentItem.SubItems.Add(e.group);
+                StudentsListView.Items.Add(studentItem);
                 index++;
             }
         
@@ -59,11 +63,14 @@ namespace ViewLayer
             }
             else
             {
-                
+                AddEvent?.Invoke(new StudentEventArgs() { name = NameTB.Text, speciality =  SpecialityTB.Text, group = GroupTB.Text });
             }
 
         }
 
-
+        void IView.UpdateData(IEnumerable<StudentEventArgs> studentEventArgs)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
