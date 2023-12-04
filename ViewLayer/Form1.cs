@@ -24,7 +24,7 @@ namespace ViewLayer
         public event Action<StudentEventArgs> AddEvent;
         public event Action<int> DeleteEvent;
 
-        private void UpdateData(IEnumerable<StudentEventArgs> studentEventArgs)
+        void IView.UpdateData(IEnumerable<StudentEventArgs> studentEventArgs)
         {
             StudentsListView.Items.Clear();
 
@@ -46,7 +46,7 @@ namespace ViewLayer
         {
             if (StudentsListView.SelectedIndices.Count >= 1)
             {
-                
+                DeleteEvent?.Invoke(StudentsListView.SelectedIndices[0]);
             }
             else
             {
@@ -68,9 +68,5 @@ namespace ViewLayer
 
         }
 
-        void IView.UpdateData(IEnumerable<StudentEventArgs> studentEventArgs)
-        {
-            throw new NotImplementedException();
-        }
     }
 }
