@@ -14,16 +14,20 @@ namespace Presenter
         IView view;
         IModel model;
 
-        public Presenter ()
+        public Presenter (IModel model, IView view)
         {
+
+            this.model = model;
+            this.view = view;
             view.AddEvent += View_OnAdd;
             view.DeleteEvent += View_OnDelete;
             model.DataSourceChanged += Model_DataChanged;
+            model.InvokeDataChanged();
         }
 
         public void View_OnAdd(StudentEventArgs e)
         {
-            model.Add(new Student());
+            model.Add(new Student() { Name = e.name, Speciality = e.speciality, Group = e.group});
         }
 
         public void View_OnDelete(int index)
@@ -44,6 +48,8 @@ namespace Presenter
             }
             view.UpdateData(list);
         }
+
+        
 
 
     }

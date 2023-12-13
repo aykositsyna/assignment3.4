@@ -19,6 +19,7 @@ namespace ViewLayer
             StudentsListView.Columns.Add("Name");
             StudentsListView.Columns.Add("Speciality");
             StudentsListView.Columns.Add("Group");
+            
         }
 
         public event Action<StudentEventArgs> AddEvent;

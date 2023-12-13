@@ -27,5 +27,10 @@ namespace ModelLayer
             Students.RemoveAt(index);
             DataSourceChanged?.Invoke(this, Students);
         }
+
+        public void InvokeDataChanged()
+        {
+            DataSourceChanged?.Invoke(this, Students);
+        }
     }
 }

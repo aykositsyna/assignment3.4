@@ -47,6 +47,7 @@
             this.StudentsListView.Size = new System.Drawing.Size(457, 365);
             this.StudentsListView.TabIndex = 0;
             this.StudentsListView.UseCompatibleStateImageBehavior = false;
+            this.StudentsListView.View = System.Windows.Forms.View.Details;
             // 
             // NameTB
             // 

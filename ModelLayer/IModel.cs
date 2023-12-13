@@ -13,5 +13,7 @@ namespace ModelLayer
         void Delete(int index);
 
         event EventHandler<IEnumerable<Student>> DataSourceChanged;
+
+        void InvokeDataChanged();
     }
 }
